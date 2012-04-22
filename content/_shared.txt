@@ -1,6 +1,7 @@
-name: Ñame
+sitename: Your sitename goes here
 -
-profession: Gräphic Designer
+page_keywords: 
 -
-email: 
-<hi@yourdomain.com>
+page_description: 
+-
+banner: 

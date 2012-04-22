@@ -1,10 +1,10 @@
 if $children do
-  <ul class="projects">
+  <ul>
     foreach $children do
-      <li class="col seven">
-        <p class="date col one">@date</p>
-        <h2 class="col five">
-          if @thumb do <img src="@thumb" class="project-thumb" alt=""> endif
+      <li>
+        <p>@date</p>
+        <h2>
+          if @thumb do <img src="@thumb" alt="" /> endif
           <a href="@url">@title</a>
         </h2>
       </li>
