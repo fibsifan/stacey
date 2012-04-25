@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <ul id="navigation" class="col two">
   {% for child in page.root %}
     <li>
@@ -6,3 +7,38 @@
     </li>
   {% endfor %}
 </ul>
+=======
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <div class="row">
+        <div class="offset2 span6">
+          <ul class="nav">
+            <li>
+              <a href="{{ page.root }}">@sitename</a>
+            </li>
+            {% for root in page.root %}
+              {% if root.children %}
+                <li>
+                  <div class="nav-group dropdown">
+                    <a href="{{ root.url }}">{{ root.title }}</a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      {% include 'partials/navigation/children.html' with { 'page' : root } %}
+                    </ul>
+                  </div>
+                </li>
+              {% endif %}
+              {% if !root.children %}
+                <li>
+                  <a href="{{ root.url }}">{{ root.title }}</a>
+                </li>
+              {% endif  %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="{{ page.root }}/public/js/fixnav.js"></script>
