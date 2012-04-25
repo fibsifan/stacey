@@ -14,6 +14,8 @@ If you want clean urls, `mv htaccess .htaccess`
 
 ## Templates
 
+This version of stacey includes a template featuring bootstrap.
+
 Stacey uses the [Twig templating language](http://twig.sensiolabs.org/).
 
 There are an additional two sets of templates which can be found at:
@@ -27,5 +29,5 @@ See <http://staceyapp.com> for more detailed usage information.
 ## Copyright/License
 
 Copyright (c) 2009 Anthony Kolber. See `LICENSE` for details.
-Except [PHP Markdown Extra](http://michelf.com/projects/php-markdown/extra/) which is (c) Michel Fortin (see `/app/parsers/markdown-parser.inc.php` for details) and
-[jsmin.php](https://github.com/rgrove/jsmin-php/) which is (c) Ryan Grove (see `app/parsers/json-minifier.inc.php` for details).
+Except [PHP Markdown Extra](http://michelf.com/projects/php-markdown/extra/) which is (c) Michel Fortin (see `/app/parsers/markdown-parser.inc.php` for details),
+[jsmin.php](https://github.com/rgrove/jsmin-php/) which is (c) Ryan Grove (see `app/parsers/json-minifier.inc.php` for details) and [Bootstrap](http://twitter.github.com/bootstrap/) which is (c) Twitter, Inc.
