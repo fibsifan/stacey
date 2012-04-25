@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<ul id="navigation" class="col two">
-  {% for child in page.root %}
-    <li>
-      <a href="{{ child.url }}">{{ child.title }}</a>
-      {% include 'partials/navigation/children.html' with { 'page' : child } %}
-    </li>
-  {% endfor %}
-</ul>
-=======
 <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
@@ -15,7 +5,7 @@
         <div class="offset2 span6">
           <ul class="nav">
             <li>
-              <a href="{{ page.root }}">@sitename</a>
+              <a href="{{ page.root_path }}">{{ page.sitename }}</a>
             </li>
             {% for root in page.root %}
               {% if root.children %}
@@ -28,8 +18,7 @@
                     </ul>
                   </div>
                 </li>
-              {% endif %}
-              {% if !root.children %}
+              {% else %}
                 <li>
                   <a href="{{ root.url }}">{{ root.title }}</a>
                 </li>
