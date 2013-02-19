@@ -4,3 +4,4 @@ page_description: Describe your site!
 banner: 
 name: Your name goes here
 profession: and of course, your profession here
+# minify: true
