@@ -1,24 +1,51 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-  "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>Page not found (404)</title>
     <meta name="description" content="">
-    <style type="text/css" media="screen">
-      body { font-family: "Times New Roman", "Times", times, sans-serif; text-align: center; }
-      h1 { margin: 35px 0px 6px 0px; text-decoration: underline; }
-      h2 { margin: 6px 0px; }
-      p { margin: 6px 0px; }
-      a { color: #000; text-decoration: none; border-bottom: 1px solid #999; }
-    </style>
   </head>
   <body>
-    <div id="container">
-      <h1>404</h1>
-      <h2>Page could not be found.</h2>
-      <p>Unfortunately, the page you were looking for does not exist here.</p>
-      <p><a href="/">&larr; Index</a></p>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="{{ page.root_path }}">{{ page.sitename }}</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                Home
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/public/js/fixnav.js"></script>
+    <div class="container" id="page-content">
+      <div class="row">
+        <div class="offset3 span6">
+          <h1>404</h1>
+          <h2>Page could not be found.</h2>
+          <p>Unfortunately, the page you were looking for does not exist here.</p>
+          <p><a href="/">&larr; Index</a></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <p>
+            &copy; Copyright fib 2013 <a href="/feed.atom">RSS</a><br />
+            <em>
+              Content managed by <a href="http://www.staceyapp.com">stacey</a>
+            </em>
+          </p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
