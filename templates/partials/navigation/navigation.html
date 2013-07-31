@@ -1,21 +1,20 @@
 <div class="navbar">
-  <div class="navbar-inner">
     <div class="container">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      <!--<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </a>
-      <a class="brand" href="{{ page.root_path }}">{{ page.sitename }}</a>
-      <div class="nav-collapse">
-        <ul class="nav">
+      </a>-->
+      <a class="navbar-brand" href="{{ page.root_path }}">{{ page.sitename }}</a>
+      <!--<div class="nav-collapse">-->
+        <ul class="nav navbar-nav">
           {% for root in page.root %}
             <li{% if [page.root_path,root.permalink] | join == page.url %} class="active"{% endif %}>
               {% if root.children %}
-                <div class="nav-group dropdown">
+                <div class="dropdown">
                   <a href="{{ root.url }}">{{ root.title }}</a>
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                     {% include 'partials/navigation/children.html' with { 'page' : root } %}
                   </ul>
                 </div>
@@ -25,8 +24,7 @@
             </li>
           {% endfor %}
         </ul>
-      </div>
+      <!--</div>-->
     </div>
-  </div>
 </div>
 <script src="{{ page.root_path }}public/js/fixnav.js"></script>
