@@ -1,12 +1,12 @@
 <div class="navbar">
     <div class="container">
-      <!--<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </a>-->
+      </button>
       <a class="navbar-brand" href="{{ page.root_path }}">{{ page.sitename }}</a>
-      <!--<div class="nav-collapse">-->
+      <div class="nav-collapse collapse navbar-responsive-collapse">
         <ul class="nav navbar-nav">
           {% for root in page.root %}
             <li{% if [page.root_path,root.permalink] | join == page.url %} class="active"{% endif %}>
@@ -24,7 +24,7 @@
             </li>
           {% endfor %}
         </ul>
-      <!--</div>-->
+      </div>
     </div>
 </div>
 <script src="{{ page.root_path }}public/js/fixnav.js"></script>
