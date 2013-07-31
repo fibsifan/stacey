@@ -19,8 +19,6 @@
         $content.addClass('under-nav-offset')
       } else if (scrollTop <= navTop && isFixed) {
         isFixed = 0
-        $nav.removeClass('navbar-fixed-top')
-        $content.removeClass('under-nav-offset')
       }
     }
   })
