@@ -39,11 +39,8 @@ RewriteRule ^(.+)$ public/$1 [L]
 # Allow basic authentication
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-# Prevent access to .txt files
-<Files ~ "\.txt$">
-  Order allow,deny
-  Deny from all
-</Files>
+# Prevent access to .txt & .yml files
+RedirectMatch 404 \.(txt|yml)$
 
 # Increase cookie security
 <IfModule php5_module>
