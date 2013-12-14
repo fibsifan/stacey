@@ -1,10 +1,10 @@
 {% for child in page.root %}
   {% if child.children %}
-    <ul class="projects">
+    <ul>
     {% for child in child.children %}
-      <li class="col seven {{ child.id }}">
-        <p class="date col one">{{ child.date | date("Y, M-") }}</p>
-        <h2 class="col five">
+      <li>
+        <p>{{ child.date | date("Y, M-") }}</p>
+        <h2>
           {% if child.thumb %}
             <img src="{{ child.thumb.url }}" width="{{ child.thumb.width }}" height="{{ child.thumb.height }}" class="project-thumb" alt="">
           {% endif %}
