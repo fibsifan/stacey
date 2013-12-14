@@ -1,30 +1,25 @@
-<div class="navbar">
-    <div class="container">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{{ page.root_path }}">{{ page.sitename }}</a>
-      <div class="nav-collapse collapse navbar-responsive-collapse">
-        <ul class="nav navbar-nav">
-          {% for root in page.root %}
-            <li{% if [page.root_path,root.permalink] | join == page.url %} class="active"{% endif %}>
-              {% if root.children %}
-                <div class="dropdown">
-                  <a href="{{ root.url }}">{{ root.title }}</a>
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                    {% include 'partials/navigation/children.html' with { 'page' : root } %}
-                  </ul>
-                </div>
-              {% else %}
+<div>
+  <div>
+    <a class="navbar-brand" href="{{ page.root_path }}">{{ page.sitename }}</a>
+    <div class="nav-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav">
+        {% for root in page.root %}
+          <li{% if [page.root_path,root.permalink] | join == page.url %} class="active"{% endif %}>
+            {% if root.children %}
+              <div class="dropdown">
                 <a href="{{ root.url }}">{{ root.title }}</a>
-              {% endif  %}
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                  {% include 'partials/navigation/children.html' with { 'page' : root } %}
+                </ul>
+              </div>
+            {% else %}
+              <a href="{{ root.url }}">{{ root.title }}</a>
+            {% endif  %}
+          </li>
+        {% endfor %}
+      </ul>
     </div>
+  </div>
 </div>
 <script src="{{ page.root_path }}public/js/fixnav.js"></script>
