@@ -31,6 +31,7 @@ See <http://staceyapp.com> for more detailed usage information.
 Copyright (c) 2009 Anthony Kolber. See `LICENSE` for details.
 Except:  
 * [PHP Markdown Extra](http://michelf.com/projects/php-markdown/extra/) which is (c) Michel Fortin (see `/app/parsers/markdown-parser.inc.php` for details),
-* [Bootstrap](http://twitter.github.com/bootstrap/) which is (c) Twitter, Inc.
+* [Bootstrap](http://getbootstrap.com) which is (c) Twitter, Inc.,
+* [jQuery](http://jquery.com) which is (c) jQuery Foundation, Inc. and others,
 * [Minify_HTML](http://code.google.com/p/minify/) which is (c) Stephen Clay (see `app/parsers/html-minifier/HTML.php` for details) and
 * [jsmin.php](https://github.com/rgrove/jsmin-php/) which is (c) Ryan Grove (see `app/parsers/json-minifier.inc.php` for details).
