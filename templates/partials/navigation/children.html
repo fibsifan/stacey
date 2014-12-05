@@ -1,6 +1,8 @@
 {% for child in page.children %}
   <li{% if [page.root_path,root.permalink] | join == page.url %} class="active"{% endif %}>
     <a href="{{ child.url }}">{{ child.page_name }}</a>
+    <!--
     {% include 'partials/navigation/children.html' with { 'page' : child } %}
+    -->
   </li>
 {% endfor %}
