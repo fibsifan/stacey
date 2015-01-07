@@ -10,13 +10,15 @@ If you look in the `/content` and `/templates` folders, you should get the gener
 
 Copy to server, `chmod 777 app/_cache`.
 
-If you want clean urls, `mv htaccess .htaccess`
+If you want clean urls, `mv htaccess .htaccess` and change RewriteBase if necessary.
 
 ## Templates
 
 This version of stacey includes a template featuring bootstrap.
 
 Stacey uses the [Twig templating language](http://twig.sensiolabs.org/).
+
+If you want the original template, use kolber's Stacey, which can be found at <http://github.com/kolber/stacey>.
 
 There are an additional two sets of templates which can be found at:
 <http://github.com/kolber/stacey-template2> &
