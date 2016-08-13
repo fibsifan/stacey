@@ -1,24 +1,31 @@
-<div>
-  <div>
-    <a href="{{ page.root_path }}">{{ page.sitename }}</a>
-    <div>
-      <ul>
-        {% for root in page.root %}
-          <li{% if [page.root_path,root.permalink] | join == page.url %} class="active"{% endif %}>
-            {% if root.children %}
-              <div>
-                <a href="{{ root.url }}">{{ root.title }}</a>
-                <ul>
-                  {% include 'partials/navigation/children.html' with { 'page' : root } %}
-                </ul>
-              </div>
-            {% else %}
-              <a href="{{ root.url }}">{{ root.title }}</a>
-            {% endif  %}
+<!-- BEGIN navigation.html -->
+<nav class="navbar navbar-light bg-faded navbar-fixed-top">
+  <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+    &#9776;
+  </button>
+  <div class="collapse navbar-toggleable-xs" id="collapsingNavbar">
+    <a href="{{ page.root_path }}" class="navbar-brand">{{ page.sitename }}</a>
+    <ul class="nav navbar-nav">
+      {% for root in page.root %}
+        {% if root.children %}
+          <li class="nav-item{% if [page.root_path,root.permalink] | join == page.url %} active{% endif %}">
+            <a href="{{ root.url }}" class="nav-link">{{ root.title }}</a>
           </li>
-        {% endfor %}
-      </ul>
-    </div>
+          <li class="nav-item dropdown">
+            <button type="button" class="nav-link dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+              {% include 'partials/navigation/children.html' with { 'page' : root } %}
+            </ul>
+          </li>
+        {% else %}
+          <li class="nav-item{% if [page.root_path,root.permalink] | join == page.url %} active{% endif %}">
+            <a href="{{ root.url }}" class="nav-link">{{ root.title }}</a>
+          </li>
+        {% endif  %}
+      {% endfor %}
+    </ul>
   </div>
-</div>
-<script src="{{ page.root_path }}public/js/fixnav.js"></script>
+</nav>
+<!-- END navigation.html -->

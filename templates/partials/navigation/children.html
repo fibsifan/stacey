@@ -1,6 +1,8 @@
+<!-- BEGIN children.html -->
 {% for child in page.children %}
-  <li{% if [page.root_path,root.permalink] | join == page.url %} class="active"{% endif %}>
+  <li class="dropdown-item">
     <a href="{{ child.url }}">{{ child.page_name }}</a>
-    {% include 'partials/navigation/children.html' with { 'page' : child } %}
+    <!-- include 'partials/navigation/children.html' with { 'page' : child } -->
   </li>
 {% endfor %}
+<!-- END children.html -->

@@ -1,26 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
   <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <!-- Required meta tags always come first - from bootstrap documentation -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
     <title>{{ page.sitename }} - {{ page.title }}</title>
     <meta name="description" content="{{ page.description }}" />
     <meta name="keywords" content="{{ page.keywords }}" />
     <link rel="alternate" type="application/atom+xml" href="{{ page.root_path }}feed/" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css"
+          integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY"
+          crossorigin="anonymous">
+    <style type="text/css">
+      body { padding-top: 3.5rem; }
+    </style>
   </head>
   <body>
-    {% include 'partials/header.html' %}
     <div>
-      <div>
-        <div>
-          {{ page.content }}
+      {% include 'partials/header.html' %}
+      <div class="container">
+        <div class="row">
+          <div class="offset-md-2 col-md-8">
+            {{ page.content }}
+          </div>
         </div>
-      </div>
-      <div>
-        <div>
-          {% include 'partials/footer.html' %}
+        <div class="row">
+          <div class="offset-md-2 col-md-8">
+            {% include 'partials/footer.html' %}
+          </div>
         </div>
       </div>
     </div>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"
+            integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.4/js/tether.min.js"
+            integrity="sha384-yacJg5r/trYB82m2y+UHKTdBhdzKZAB+IDxN5gZcVIf/GruDEsarUdSzPMx5m9XH"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js"
+            integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD"
+            crossorigin="anonymous"></script>
   </body>
 </html>
